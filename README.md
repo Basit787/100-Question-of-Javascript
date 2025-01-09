@@ -7,7 +7,7 @@
    ```
 
 2. ```
-   Reverse a string without using the reverse method    
+   Reverse a string without using the reverse method
    ```
 
 3. ```
@@ -16,20 +16,44 @@
 4. ```
    Check if a number is prime.
    ```
-5. ```
-   Convert a callback-based function to a promise.
+5. ```javascript
+   //Convert a callback-based function to a promise.
+
+   function hello(callback) {
+     const obj = { name: "John", result: true };
+     setTimeout(() => {
+       callback(null, obj);
+     }, 2000);
+   }
+
+   hello(function greet(error, obj) {
+     if (error) {
+       console.log(error);
+     } else {
+       console.log(obj);
+     }
+   });
    ```
-6. ```
-   Create a function that adds up the numbers in an array.
+
+6. ```javascript
+   //Create a function that adds up the numbers in an array.
+   const arr = [1, 2, 3, 4, 5]; // 15
    ```
-7. ```
-   Flatten an array of nested arrays into a single array.
+
+7. ```javascript
+   //Flatten an array of nested arrays into a single array
+   const arr = [1, [2], [3, [4, [5], [6]]], 7];
+   //output= [1,2,3,4,5,6,7]
    ```
-8. ```
-   Write a function that checks if a string is a palindrome.
+
+8. ```javascript
+   //Write a function that checks if a string is a palindrome.
+   isPalindrome("asdfgfdsa"); // true
+   isPalindrome("Hello"); // false
    ```
-9. ```
-   Find the largest number in an array.
+9. ```javascript
+   //Find the largest number in an array.
+   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //9
    ```
 10. ```
     Implement a basic debounce function.
@@ -43,20 +67,35 @@
 12. ```
     Implement a function to find the factorial of a number.
     ```
-13. ```
-    Write a function that returns the Fibonacci series up to a given number.
+13. ```javascript
+    //Write a function that returns the Fibonacci series up to a given number.
+    example: fibonacci(5); // 0,1,1,2,3
+    example: fibonacci(20); // 0,1,1,2,3,5,8,13
     ```
-14. ```
-    Find the sum of numbers in a range.
+14. ```javascript
+    //Find the sum of numbers in a range.
+    example: sumNumber(3, 6); //18
     ```
-15. ```
-    Convert a promise-based function to async/await.
+15. ```javascript
+    //Convert a promise-based function to async/await.
+    const fetchData = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const data = "Fetched Data";
+          resolve(data);
+        }, 1000);
+      });
+    };
     ```
-16. ```
-    Merge two sorted arrays into a single sorted array.
+
+16. ```javascript
+    //Merge two sorted arrays into a single sorted array.
+    example: [1, 3, 5], [2, 4, 6]; // [1,2,3,4,5,6]
     ```
-17. ```
-    Implement a function to calculate the nth Fibonacci number.
+17. ```javascript
+    //Implement a function to calculate the nth Fibonacci number.
+    example: fibonacci(5); //5
+    fibonacci(10); //55
     ```
 18. ```
     Check if an object is empty.
@@ -331,3 +370,7 @@
 100.  ```
       Implement a function to merge multiple arrays into one array
       ```
+
+```
+
+```
